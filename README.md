@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O projeto disponibiliza informações sobre o Cartola FC da Globo.com, utilizando a API oficial.
+O projeto para aplicativo mobile que disponibiliza informações sobre o Cartola FC da Globo.com, utilizando a API oficial.
 
 ## Tecnologias
 
