@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{E8A7D9E2-F171-4685-8C40-CEA369625621}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CartoladaMobile/MainPage.xaml.cs">
+    <Files>
+      <File FileName="CartoladaMobile/Services/CartoladaApi.cs" Line="70" Column="1" />
+      <File FileName="CartoladaMobile/MainPage.xaml.cs" Line="20" Column="31" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CartoladaMobile.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.73599BF7-BD0E-4BE5-86A9-44AF85AB317E">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.CartoladaMobile.iOS>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CartoladaMobile.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CartoladaMobile.Views.Partidas"
+    Title="{ Binding Title }">
+	<ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="label" TargetType="Label">
+                        <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                        <Setter Property="WidthRequest" Value="30"></Setter>
+                    </Style>
+
+                    <Style x:Key="labelPosicao" BaseResourceKey="label" TargetType="Label">
+                        <Setter Property="TextColor" Value="Gray"></Setter>
+                        <Setter Property="FontSize" Value="12"></Setter>
+                    </Style>
+
+                    <Style x:Key="labelVersus" BaseResourceKey="label" TargetType="Label">
+                        <Setter Property="FontSize" Value="10"></Setter>
+                    </Style>
+
+                    <Style x:Key="labelPlacar" BaseResourceKey="label" TargetType="Label">
+                        <Setter Property="WidthRequest" Value="20"></Setter>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                    </Style>
+
+                    <Style TargetType="Image">
+                        <Setter Property="WidthRequest" Value="30"></Setter>
+                    </Style>
+
+                    <Style x:Key="labelDataLocal" TargetType="Label">
+                        <Setter Property="TextColor" Value="Gray"></Setter>
+                        <Setter Property="FontSize" Value="10"></Setter>
+                        <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <ListView x:Name="lvwPartidas" ItemsSource="{ Binding Lista }" RowHeight="75">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                <StackLayout Orientation="Horizontal" Padding="0" Spacing="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label Text="{ Binding ClubeCasaPosicao, StringFormat='{0}º' }" Style="{ StaticResource labelPosicao }" />
+                                    <Image Source="{ Binding ClubeCasa.Escudos.Img60x60 }" />
+
+                                    <Label Text="{ Binding PlacarCasa }" Style="{ StaticResource labelPlacar }" />
+                                    
+                                    <Label Text="X" Style="{ StaticResource labelVersus }" />
+
+                                    <Label Text="{ Binding PlacarVisitante }" Style="{ StaticResource labelPlacar }" />
+
+                                    <Image Source="{ Binding ClubeVisitante.Escudos.Img60x60 }" />
+                                    <Label Text="{ Binding ClubeVisitantePosicao, StringFormat='{0}º' }" Style="{ StaticResource labelPosicao }" />
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" Padding="0" Spacing="0" VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Label Text="{ Binding PartidaData, StringFormat='{0:dd/MM/yyyy HH:mm}' }" Style="{ StaticResource labelDataLocal }" />
+                                    <Label Text="{ Binding Local }" Style="{ StaticResource labelDataLocal }" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

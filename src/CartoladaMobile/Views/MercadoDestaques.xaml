@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CartoladaMobile.Views.MercadoDestaques"
+    Title="{ Binding Title }">
+	<ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+            </StackLayout.Resources>
+            <ListView x:Name="lvwMercadoDestaques" ItemsSource="{ Binding Lista }" RowHeight="55">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="0" Spacing="5">
+                                <StackLayout Orientation="Vertical"
+                                    VerticalOptions="Center"
+                                    Padding="15,0,0,0"
+                                    Spacing="0">
+                                    <Image Source="{ Binding ClubeEscudo }" />
+                                </StackLayout>
+
+                                <StackLayout Padding="0,0,0,0" VerticalOptions="End" Spacing="0">
+                                    <Image Source="{ Binding Atleta.Imagem }" HeightRequest="50" />
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="0,0,0,0" Spacing="0" >
+                                    <Label Text="{ Binding Atleta.Apelido }" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{ Binding Posicao }" FontSize="11" TextColor="Gray" />
+                                </StackLayout>
+
+                                <StackLayout HorizontalOptions="EndAndExpand"
+                                    Padding="0,0,10,0"
+                                    VerticalOptions="Center">
+                                    <Label VerticalTextAlignment="Center"
+                                        HorizontalTextAlignment="End"
+                                        Text="{ Binding Escalacoes, StringFormat='{0:#,##0}' }"
+                                        FontSize="16" TextColor="{ StaticResource PrimaryDark }" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
