@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{E8A7D9E2-F171-4685-8C40-CEA369625621}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CartoladaMobile/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CartoladaMobile/ViewModels/MainPageViewModel.cs">
     <Files>
-      <File FileName="CartoladaMobile/Services/CartoladaApi.cs" Line="70" Column="1" />
-      <File FileName="CartoladaMobile/MainPage.xaml.cs" Line="20" Column="31" />
+      <File FileName="CartoladaMobile/MainPage.xaml.cs" Line="35" Column="40" />
+      <File FileName="CartoladaMobile/ViewModels/MainPageViewModel.cs" Line="31" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

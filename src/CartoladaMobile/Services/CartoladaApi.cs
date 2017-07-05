@@ -108,5 +108,20 @@ namespace CartoladaMobile.Services
 
             return clubes;
 		}
+
+        public async Task<MercadoStatus> GetMercadoStatusAsync()
+        {
+			string url = getURL("mercado/status");
+
+			HttpClient client = new HttpClient();
+
+			var response = await client.GetAsync(url);
+
+			String content = await response.Content.ReadAsStringAsync();
+
+			MercadoStatus mercadoStatus = JsonConvert.DeserializeObject<MercadoStatus>(content);
+
+            return mercadoStatus;
+        }
     }
 }

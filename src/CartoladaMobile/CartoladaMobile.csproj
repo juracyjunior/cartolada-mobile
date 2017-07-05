@@ -61,6 +61,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ColorApp.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Models\MercadoStatus.cs" />
+    <Compile Include="Models\FechamentoMercado.cs" />
+    <Compile Include="Models\EscudosClube.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

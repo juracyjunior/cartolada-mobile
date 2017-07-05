@@ -12,18 +12,7 @@ namespace CartoladaMobile.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _title;
-        public string Title
-        {
-            get
-            {
-                return _title;
-            }
-            set
-            {
-                _title = value;
-            }
-        }
+        public string Title { get; set; }
 
         private List<MercadoDestaque> _lista;
         public List<MercadoDestaque> Lista
