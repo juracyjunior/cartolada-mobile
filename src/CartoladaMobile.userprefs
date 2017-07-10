@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{E8A7D9E2-F171-4685-8C40-CEA369625621}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CartoladaMobile/ViewModels/MainPageViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CartoladaMobile/Models/MercadoStatus.cs">
     <Files>
-      <File FileName="CartoladaMobile/MainPage.xaml.cs" Line="35" Column="40" />
-      <File FileName="CartoladaMobile/ViewModels/MainPageViewModel.cs" Line="31" Column="10" />
+      <File FileName="CartoladaMobile/MainPage.xaml.cs" Line="40" Column="1" />
+      <File FileName="CartoladaMobile/MainPage.xaml" Line="7" Column="67" />
+      <File FileName="CartoladaMobile/Models/MercadoStatus.cs" Line="14" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.CartoladaMobile.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.73599BF7-BD0E-4BE5-86A9-44AF85AB317E">
+  <MonoDevelop.Ide.ItemProperties.CartoladaMobile.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7ED0F811-2EAA-4DDB-8674-77572BDE5D21">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.CartoladaMobile.iOS>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

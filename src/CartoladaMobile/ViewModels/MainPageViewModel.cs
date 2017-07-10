@@ -9,30 +9,41 @@ namespace CartoladaMobile.ViewModels
 {
     public class MainPageViewModel //: INotifyPropertyChanged
     {
-        //public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public string Title { get; set; }
 
         public MercadoStatus MercadoStatus { get; set; }
 
-        public Command CarregarMercadoStatus { get; set; }
+		public string MercadoStatusStr
+		{
+			get
+			{
+                if (MercadoStatus == null)
+                    return string.Empty;
+                
+				string status = this.MercadoStatus?.StatusMercado == 1 ? "Aberto" : "Fechado";
+				return $"Mercado {status}";
+			}
+		}
+
+		public string RodadaAtualStr
+		{
+			get
+			{
+				if (MercadoStatus == null)
+					return string.Empty;
+
+				string rodada = this.MercadoStatus?.RodadaAtual.ToString();
+                return $"Mercado {rodada}";
+			}
+		}
 
         public MainPageViewModel()
         {
             Title = "Cartolada";
 
-            DoCarregaMercadoStatus();
+			MercadoStatus = (new CartoladaApi()).GetMercadoStatusAsync();
         }
-
-        public async void DoCarregaMercadoStatus()
-        {
-			CartoladaApi api = new CartoladaApi();
-            this.MercadoStatus = await api.GetMercadoStatusAsync();
-        }
-
-		public string MercadoStatusStr()
-		{
-			return this.MercadoStatus?.StatusMercado == 2 ? "Fechado" : "Aberto";
-		}
     }
 }

@@ -24,11 +24,11 @@ namespace CartoladaMobile.Views
 
             lvwPartidas.IsPullToRefreshEnabled = true;
 
-            lvwPartidas.Refreshing += (sender, e) => 
+            lvwPartidas.RefreshCommand = new Command(() => 
             {
                 Load();
                 lvwPartidas.EndRefresh();
-            };
+            });
 
             Load();
         }

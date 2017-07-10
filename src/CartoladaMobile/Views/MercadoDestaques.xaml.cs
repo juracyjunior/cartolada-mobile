@@ -14,19 +14,19 @@ namespace CartoladaMobile.Views
             InitializeComponent();
 
             this.BindingContext = viewModel = new MercadoDestaquesViewModel();
-		}
+        }
 
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
-			lvwMercadoDestaques.IsPullToRefreshEnabled = true;
+            lvwMercadoDestaques.IsPullToRefreshEnabled = true;
 
-			lvwMercadoDestaques.Refreshing += (sender, e) =>
-			{
+            lvwMercadoDestaques.RefreshCommand = new Command(() =>
+            {
                 Load();
-				lvwMercadoDestaques.EndRefresh();
-			};
+                lvwMercadoDestaques.EndRefresh();
+            });
 
             Load();
 		}

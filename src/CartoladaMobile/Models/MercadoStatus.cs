@@ -11,6 +11,13 @@ namespace CartoladaMobile.Models
         [JsonProperty("status_mercado")]
         public int StatusMercado { get; set; }
 
+        public string StatusMercadoStr {
+            get
+            {
+                return StatusMercado == 2 ? "Fechado" : "Aberto";
+            }
+        }
+
         [JsonProperty("times_escalados")]
         public int TimesEscalados { get; set; }
 

@@ -14,6 +14,8 @@ namespace CartoladaMobile.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.LightContent, false);
+
             LoadApplication(new CartoladaMobile.Main.App());
 
             return base.FinishedLaunching(app, options);

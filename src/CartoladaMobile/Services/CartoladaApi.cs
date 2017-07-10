@@ -109,15 +109,15 @@ namespace CartoladaMobile.Services
             return clubes;
 		}
 
-        public async Task<MercadoStatus> GetMercadoStatusAsync()
+        public MercadoStatus GetMercadoStatusAsync()
         {
 			string url = getURL("mercado/status");
 
 			HttpClient client = new HttpClient();
 
-			var response = await client.GetAsync(url);
+            var response = client.GetAsync(url);
 
-			String content = await response.Content.ReadAsStringAsync();
+            String content = response.Result.Content.ReadAsStringAsync().Result;
 
 			MercadoStatus mercadoStatus = JsonConvert.DeserializeObject<MercadoStatus>(content);
 
